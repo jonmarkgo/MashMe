@@ -23,9 +23,11 @@ $e_apikey = 'VZ6AQRO0XGTPJNMAF';
   curl_setopt($ch, CURLOPT_URL, 'http://api.hunch.com/api/v1/get-auth-token/?auth_token_key='.$_GET["auth_token_key"].'&app_id='.$app_id.'&auth_sig='.$data);
   $result = curl_exec($ch);
   $result = json_decode($result);
-  curl_setopt($ch, CURLOPT_URL, 'http://api.hunch.com/api/v1/get-recommendations/?auth_token='.$result->auth_token.'&limit=100&topic_ids=list_album');
+  curl_setopt($ch, CURLOPT_URL, 'http://api.hunch.com/api/v1/get-recommendations/?auth_token='.$result->auth_token.'&limit=2&topic_ids=list_musician');
   $result2 = curl_exec($ch);
   $result2 = json_decode($result2);
+  //print_r($result2);
+  /* die();
   $x = 1;
   $albums = array();
   foreach($result2->recommendations as $rec) {
@@ -34,17 +36,17 @@ $e_apikey = 'VZ6AQRO0XGTPJNMAF';
       $albums[$rec->artist] = $rec;
       $x++;
     }
-  }
+  }*/
   $songs = array();
-  foreach($albums as $artist=>$track) {
-    $e_url1 = 'http://developer.echonest.com/api/v4/artist/audio?api_key='.$e_apikey.'&format=json&name='.urlencode($track->artist).'&results=1&start=0';
+  foreach($result2->recommendations as $artist) {
+    $e_url1 = 'http://developer.echonest.com/api/v4/artist/audio?api_key='.$e_apikey.'&format=json&name='.urlencode($artist->title).'&results=1&start=0';
     curl_setopt($ch, CURLOPT_URL, $e_url1);
     $result3 = curl_exec($ch);
     $result3 = json_decode($result3);
     $songs[] = $result3->response->audio[0];
     $e_url = '';
   }
-  //print_r($songs);
+ // print_r($songs);die();
   $song1 = $songs[0]->url;
   $song2 = $songs[1]->url;
   $time = time();
