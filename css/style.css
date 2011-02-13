@@ -1,0 +1,67 @@
+/*LAYOUT*/
+
+* { outline: none; }
+
+body { background: #906932 url(images/bg.jpg) center no-repeat fixed;  color: #666; font: normal 13px/1.5em arial, helvetica, sans-serif; margin: 0; padding: 0; }
+
+#container1 { background: url(images/bg1.jpg) no-repeat 0% 0%; position: absolute; width: 640px; height: 480px; left: 50%; top: 50%; margin-left: -320px; /* width -(640px/2) = -320px */margin-top: -240px; /* height -(480px/2) = -240px */}
+
+#container2 { background: url(images/bg2.jpg) no-repeat 0% 0%; border: 2px solid #634624; position: absolute; width: 640px; height: 480px; left: 50%; top: 50%; margin-left: -320px; /* width -(640px/2) = -320px */margin-top: -240px; /* height -(480px/2) = -240px */}
+
+#content { height: 408px; margin-top: 32px; overflow: auto; padding: 0 10px 10px 10px; position: relative; width: 620px; }
+
+#contentRight { margin-left: 190px; }
+
+#contentLeft { float: left; padding: 10px 0 0 0; width: 180px; }
+
+#footer { padding: 5px 10px; }
+
+/*NAVIGATION TOP*/
+
+#navTop ul { padding: 0; margin: 0; color: #fff; float: left; width: 640px; }
+
+#navTop ul li { display: inline; }
+
+#navTop ul li a { background: url(images/star.gif) no-repeat 2px 2px; float: left; font-weight: bold; height: 25px; padding-top: 5px; text-align: center; text-decoration: none; color: #000; width: 128px; text-transform: uppercase; }
+
+#navTop ul li a:hover { color: #906932; text-decoration: none; font-style: italic; }
+
+/*NAVIGATION LEFT*/
+
+#navLeft { margin: 0; padding: 0 0 10px 0; }
+
+#navLeft li { list-style-type: none; }
+
+/*STYLES*/
+
+h1 { font-size: 2.2em; letter-spacing: 1px; margin-top: 10px; padding: 30px 0 0 0; }
+
+h1 span { background-color: #906932; color: #fff; padding: 5px 10px;  }
+
+h2,h3,h4,h5,h6 { color: #906932; letter-spacing: 1px; margin: 10px 0; }
+
+h2 { font-size: 1.8em; }
+
+h3 { font-size: 1.4em; }
+
+h4,h5,h6 { font-size: 1em; }
+
+h4 a, h4 a:visited { font-size: 1.5em; color: #906932; margin-left: 10px; }
+
+h4 a:hover { color: #e3bd7e; text-decoration: underline; }
+
+a,a:visited { color: #104c76; text-decoration: none; }
+
+a:hover { color: #4e83a8; text-decoration: none; }
+
+p { margin: 10px 0; }
+
+img { background: url(images/shadowImg.png) repeat-x scroll left bottom; border: 0; vertical-align: middle; padding-bottom: 3px; }
+
+#container1 p { font-size: 1.4em; margin-left: 10px; }
+
+#contentLeft p { font-size: 11px; line-height: 1.4em; margin: 5px 0; }
+
+#contentLeft h4 { color: #666; margin: 0 0 5px; }
+
+
