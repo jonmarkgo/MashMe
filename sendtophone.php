@@ -1,3 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+
+
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+  <div id="container1" style="text-align: center;">
+  <h1><span>MashMe</span></h1>
+
+<p>Let us mash you up.</p>
+<center>
 <?php
     // Include the PHP TwilioRest library 
     require "twilio.php";
@@ -30,3 +45,4 @@
     else
     	echo "Sent mashup to ".$_POST['phonenum']."!";
 ?>
+</center></body></html>
